@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 공학 포트폴리오</title>
+    <style>
+        /* CSS 스타일 */
+        :root {
+            --dark-green: #1E3A2B;
+            --light-green: #A3B18A;
+            --dark-gray: #374151;
+            --light-gray: #9CA3AF;
+            --white: #F9FAFB;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--dark-green);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Intro Section */
+        #intro {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            background-color: var(--dark-gray);
+            animation: fadeOut 2s forwards; /* Intro 사라지는 애니메이션 */
+            position: fixed; /* 스크롤 방지 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* 다른 요소들 위에 표시 */
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            99% {opacity: 1;}
+            100% { opacity: 0; visibility: hidden; }
+        }
+
+        .binary-text {
+            font-family: monospace;
+            color: var(--light-green);
+        }
+
+        /* Header Section */
+        header {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100; /* 스크롤 시 헤더가 항상 위에 있도록 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            color: var(--light-green);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--white);
+        }
+
+        /* Main Content Section */
+        main {
+            padding: 40px;
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: var(--dark-gray);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            color: var(--light-green);
+            border-bottom: 2px solid var(--light-green);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .portfolio-item-content {
+            padding: 20px;
+        }
+
+        .portfolio-item h3 {
+            margin-top: 0;
+            color: var(--dark-green);
+        }
+
+        .portfolio-item p {
+            color: var(--dark-gray);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--light-gray);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Intro Section -->
+    <div id="intro">
+        <span class="binary-text">01001101 01101001 01100100 01101001 01100001  01000101 01101110 01100111 01101001 01101110 01100101 01100101 01110010 01101001 01101110 01100111</span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>나의 미디어 공학 포트폴리오</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#portfolio">포트폴리오</a></li>
+                <li><a href="#resume">생기부</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>소개</h2>
+            <p>미디어 공학에 대한 열정을 가진 [이름]입니다. 창의적인 문제 해결과 혁신적인 기술 개발에 관심이 많습니다. 이 웹사이트는 저의 학업 및 개인 프로젝트를 통해 얻은 기술과 경험을 보여주는 포트폴리오입니다.</p>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>포트폴리오</h2>
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item">
+                    <img src="이미지1.jpg" alt="프로젝트 1">
+                    <div class="portfolio-item-content">
+                        <h3>프로젝트 제목 1</h3>
+                        <p>프로젝트에 대한 간단한 설명입니다. 이 프로젝트를 통해 무엇을 배웠고, 어떤 기술을 사용했는지 설명합니다.</p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item">
+                    <img src="이미지2.jpg" alt="프로젝트 2">
+                    <div class="portfolio-item-content">
+                        <h3>프로젝트 제목 2</h3>
+                        <p>프로젝트에 대한 간단한 설명입니다. 이 프로젝트를 통해 무엇을 배웠고, 어떤 기술을 사용했는지 설명합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 추가적인 포트폴리오 아이템들을 여기에 추가하세요 -->
+            </div>
+        </section>
+
+         <!-- Resume Section -->
+        <section id="resume">
+            <h2>생기부</h2>
+            <p>여기에 생기부 내용을 요약하거나, 파일 다운로드 링크를 제공할 수 있습니다.</p>
+            <ul>
+                <li>수상 경력: [내용]</li>
+                <li>교내 활동: [내용]</li>
+                <li>봉사 활동: [내용]</li>
+                </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>연락처</h2>
+            <p>궁금한 점이 있으시면 언제든지 연락 주세요!</p>
+            <p>이메일: [이메일 주소]</p>
+            <p>GitHub: [GitHub 링크]</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 [이름] 포트폴리오</p>
+    </footer>
+
+    <script>
+        // Intro Section
+        document.addEventListener('DOMContentLoaded', function() {
+            // 이진 텍스트 애니메이션
+            const introText = document.querySelector('#intro .binary-text');
+            const binaryCode = "01001101 01101001 01100100 01101001 01100001  01000101 01101110 01100111 01101001 01101110 01100101 01100101 01110010 01101001 01101110 01100111"; // 텍스트
+            let binaryDisplay = '';
+            let index = 0;
+
+            function animateBinaryText() {
+                if (index < binaryCode.length) {
+                    binaryDisplay += binaryCode[index];
+                    introText.textContent = binaryDisplay;
+                    index++;
+                    setTimeout(animateBinaryText, 50); // 속도 조절 (밀리초)
+                } else {
+                    // 텍스트 애니메이션이 끝나면 Intro 사라지도록
+                    setTimeout(() => {
+                        document.getElementById('intro').style.display = 'none';
+                    }, 1000); // 1초 후 사라짐
+                }
+            }
+
+             animateBinaryText();
+
+            // Intro 사라지는 시간 설정 (애니메이션 시간과 동일하게)
+            // setTimeout(function() {
+            //     document.getElementById('intro').style.display = 'none';
+            // }, 2000);
+        });
+    </script>
+
+</body>
+</html>
