@@ -1,0 +1,144 @@
+/* CSS 스타일 */
+:root {
+    --dark-green: #1E3A2B;
+    --dark-gray: #374151;
+    --light-green: #A3B18A;
+    --light-gray: #9CA3AF;
+    --white: #F9FAFB;
+}
+
+body {
+    font-family: 'VT323', monospace; /* 픽셀 폰트 적용 */
+    margin: 0;
+    background-color: var(--dark-green);
+    color: var(--white);
+    line-height: 1.6;
+    overflow: hidden; /* 스크롤바 제거 */
+}
+
+/* Intro Section */
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-gray);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-text {
+    font-size: 2em;
+    color: var(--light-green);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#binaryCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 텍스트 뒤에 위치 */
+}
+
+/* Header Section */
+header {
+    background-color: var(--dark-green);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* 스크롤 시 헤더가 항상 위에 있도록 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: var(--light-green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--white);
+}
+
+/* Main Content Section */
+main {
+    padding: 40px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: var(--dark-gray);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: auto; /* 내용이 넘칠 경우 스크롤 */
+    height: 70vh; /* 화면 높이에 맞게 조절 */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: var(--light-green);
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* 공통 스타일 (portfolio.html, resume.html, assignments.html, research.html에 적용) */
+.content-container {
+    padding: 20px;
+}
+
+.upload-form {
+    margin-bottom: 20px;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.file-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    color: var(--dark-gray);
+}
+
+.file-list li span {
+    margin-right: 10px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수행평가</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+</head>
+<body>
+    <header>
+        <h1>수행평가</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="portfolio.html">포트폴리오</a></li>
+                <li><a href="resume.html">생기부</a></li>
+                <li><a href="research.html">주제탐구</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-container">
+            <h2>나의 수행평가</h2>
+
+            <!-- 파일 업로드 폼 -->
+            <div class="upload-form">
+                <input type="file" id="assignmentsFile" multiple>
+                <button onclick="uploadFiles('assignments')">업로드</button>
+            </div>
+
+            <!-- 파일 목록 -->
+            <ul class="file-list" id="assignmentsList">
+                <!-- 파일 목록이 여기에 동적으로 추가됩니다. -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 [이름] 포트폴리오</p>
+    </footer>
+
+    <script src="upload.js"></script>
+</body>
+</html>
